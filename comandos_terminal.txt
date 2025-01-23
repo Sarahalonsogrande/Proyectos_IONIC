@@ -36,9 +36,22 @@ cd MyApp cordova platform add browser
 Run your app
 From the command line, run cordova run <platform name>.
 
+
+
+
 1. Crear APP IONIC.
+
 2. INTERFACE para manejo datos.
+
 3. Portada (PAGE de Ionic)
-4. Crear un SERVICIO para obtener datos del servidor
-5. Modificar la Page HOME
+
+4. Crear interface
+
+5. Crear un SERVICIO para obtener datos del servidor
+
+ - Provider en main
+ - inject HttpClient en el service
+
+6. Modificar la Page HOME
+
 	a. Ion list - Ion Item
