@@ -1,0 +1,7 @@
+{
+  "name": "agenda-tareas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
