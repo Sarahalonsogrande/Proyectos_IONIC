@@ -1,0 +1,7 @@
+{
+  "name": "movies-Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

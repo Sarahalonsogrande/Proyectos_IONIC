@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Peliculapp
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Peliculapp</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-item class="ion-padding-end">
+    <ion-input placeholder="Título" [(ngModel)]="titulo" name="titulo"></ion-input>
+    </ion-item>
+    <ion-button expand="full" class="ion-padding" (click)="buscar()">Buscar</ion-button>
+
+    <ion-progress-bar type="indeterminate" *ngIf="cargando"></ion-progress-bar>
+    <ion-list [inset]="true">
+    <ion-item-sliding *ngFor="let movie of dataService.movies">
+    <ion-item>
+    <ion-label>{{movie.Title}}</ion-label>
+    </ion-item>
+    <ion-item-options side="start">
+    <ion-item-option color="success" (click)="guardar(movie.Title)">Guardar</ionitem-option>
+    </ion-item-options>
+    <ion-item-options>
+    <ion-item-option color="danger">Eliminar</ion-item-option>
+    </ion-item-options>
+    </ion-item-sliding>
+    </ion-list>
+    </ion-content>
+
